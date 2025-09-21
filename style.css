@@ -58,11 +58,11 @@ nav ul li a:hover {
 }
 
 .left img {
-  width: 150px;
-  height: 87px;
+  width: 132px;
+  height: 77px;
   border-radius: 0%;
-  margin-left: -44px;
-  margin-right: 7px;
+  margin-left: -32px;
+  margin-right: 15px;
 }
 
 /* ==================================================Main=================================== */
@@ -443,3 +443,181 @@ h3 {
 .box6 h3 {
   color: #000080;
 }
+
+/* ======================================skills section============================================= */
+.skills-section {
+  max-width:  1208px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff00;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(128, 38, 180, 1.444);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Each skill */
+.skill {
+  text-align: center;
+}
+
+/* Circular progress */
+.circle {
+  --size: 86px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Gradient border using pseudo-element */
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 6px; /* 10px border */
+  background: conic-gradient(
+    #7c3aed,
+    #53bbb1,
+    #4a82ba,
+    #8966ba,
+    #ffffff,
+    #ffffff
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+  animation: rotateCircle 2s linear infinite;
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circle img {
+  width: 50px;
+  height: 50px;
+  background: #ffffff00;
+  padding: 8px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  animation: none;
+}
+
+.skill p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+
+/* ==========================================================contact us================================= */
+.Contact-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Contact-leftsetion img {
+  width: 75%;
+  margin-left: 110px;
+  margin-top: 72px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 100px;
+}
+
+/* Container */
+.form-container {
+  background: #ffffff00;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(128, 38, 180, 1.444);
+  padding: 25px;
+  width: 350px;
+  height: auto;
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Inputs & Select */
+input[type="text"],
+input[type="email"],
+input[type="textarea"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff44;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+
+
+
