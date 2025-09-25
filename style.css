@@ -108,7 +108,7 @@ main {
 }
 
 #element {
-  color:;
+  color:rgb(128, 38, 180);
   font-size: 3rem;
   font-weight: bold;
 }
@@ -501,7 +501,10 @@ h3 {
     #ffffff,
     #ffffff
   );
-  -webkit-mask: 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask:
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
