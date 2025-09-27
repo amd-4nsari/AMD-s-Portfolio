@@ -188,261 +188,72 @@ main {
   margin-left: 10px;
   margin-top: 32px;
 }
-
-.education-leftsection {
-  margin-top: 1px;
-  margin-left: 144px;
-  margin-right: 22px;
-  font-size: 1.2rem;
-}
-
 /* ================================================= */
-.education-align {
-  margin: 7rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 4px;
-  flex-wrap: wrap;
-  user-select: none;
-  box-sizing: border-box;
 
-}
-
-.timeline-container {
-  display: flex;
-  gap: 4px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 1200px;
-}
-
-.box {
-  position: relative;
-  width: 150px;
-  min-height: 280px;
-  background-color: #fff;
-  border-radius: 5px 5px 0 0;
-  box-shadow: 0 8px 20px rgb(0 0 0 / 0.03);
-  padding: 30px 20px 70px 20px;
-  box-sizing: border-box;
-  color: #666;
-  text-align: left;
-  overflow: visible;
-
-  /* Maintain base size for transform origin and spacing on hover */
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-  /* Maintain the box size in layout */
-  will-change: transform;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Hover grows box scale but box retains original allocation size */
-.box:hover {
-  transform: scale(1.07);
-  z-index: 10;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Top colored bar */
-.box .top-bar {
-  height: 7px;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Icon container */
-.icon {
-  margin-bottom: 15px;
-  font-size: 28px;
-  line-height: 1;
-}
-.box img {
-    width: 50px;      /* Set your desired width */
-    height: auto;     /* Set your desired height */
-    object-fit: contain; /* Keeps aspect ratio, fits inside the box */
-    margin: 0 auto 12px auto; /* Center image and add bottom space */
-    display: block;
-}
-
-/* Text title */
-h3 {
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.box h3 {
-    text-align: center;
-}
-
-/* Paragraph body */
-.timeline-container p {
-  font-size: 13px;
-  line-height: 1.4;
-  color: #555;
-  margin: 0;
-}
-
-/* Bottom timeline area */
-.bottom-timeline {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 15px;
-  color: #fff;
-  border-radius: 0 0 0px 5px;
-  padding: 0 15px;
-  box-sizing: border-box;
-}
-
-/* Arrow shape on the right side via pseudo element */
-.bottom-timeline::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid;
-  z-index: 1;
-}
-
-/* Each box color specifics */
-/* 1
-    .box1 .top-bar {
-      background: #f16464;
+   .edu-head {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
     }
-    .box1 .bottom-timeline {
-      background: #f16464;
+
+    h2 span {
+      color:rgb(128, 38, 180);
     }
-    .box1 .bottom-timeline::after {
-      border-left-color: #f16464;
+
+    .journey-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      margin-bottom: 70px;
     }
-    .box1 h3 {
-      color: #f16464;
-    } */
 
-/* 2 */
-.box2 {
-  border: 3px solid #5465e6;
-}
+    .journey-column h3 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: rgb(128, 38, 180);
+    }
 
-.box2 .top-bar {
-  background: #5465e6;
-}
+    .journey-item {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
 
-.box2 .bottom-timeline {
-  background: #5465e6;
-}
+    .journey-item::before {
+      content: attr(data-year);
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: rgb(128, 38, 180);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
 
-.box2 .bottom-timeline::after {
-  border-left-color: #5465e6;
-}
+    .journey-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
 
-.box2 h3 {
-  color: #5465e6;
-}
+    .journey-item p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #ccc;
+    }
 
-/* 3 */
-.box3 {
-  border: 3px solid #53bbb1;
-}
+    @media(max-width: 768px) {
+      .journey-container {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.box3 .top-bar {
-  background: #53bbb1;
-}
-
-.box3 .bottom-timeline {
-  background: #53bbb1;
-}
-
-.box3 .bottom-timeline::after {
-  border-left-color: #53bbb1;
-}
-
-.box3 h3 {
-  color: #53bbb1;
-}
-
-/* 4 */
-.box4 {
-  border: 3px solid #4a82ba;
-}
-
-.box4 .top-bar {
-  background: #4a82ba;
-}
-
-.box4 .bottom-timeline {
-  background: #4a82ba;
-}
-
-.box4 .bottom-timeline::after {
-  border-left-color: #4a82ba;
-}
-
-.box4 h3 {
-  color: #4a82ba;
-}
-
-/* 5 */
-.box5 {
-  border: 3px solid #8966ba;
-}
-
-.box5 .top-bar {
-  background: #8966ba;
-}
-
-.box5 .bottom-timeline {
-  background: #8966ba;
-}
-
-.box5 .bottom-timeline::after {
-  border-left-color: #8966ba;
-}
-
-.box5 h3 {
-  color: #8966ba;
-}
-
-/* 6 */
-.box6 {
-  border: 3px solid #000080;
-}
-
-.box6 .top-bar {
-  background: #000080;
-}
-
-.box6 .bottom-timeline {
-  background: #000080;
-}
-
-.box6 .bottom-timeline::after {
-  border-left-color: #000080;
-}
-
-.box6 h3 {
-  color: #000080;
-}
 
 /* ======================================skills section============================================= */
 .skills-section {
